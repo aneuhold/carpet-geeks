@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import './components/ServiceRow';
+import ServiceRow from './components/ServiceRow';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h3>Carpet Geeks</h3>
       </header>
+      <section>
+
+        {/* This will be a section for each service offering */}
+        <ServiceRow serviceTitle="Test title" serviceDescription="Test Description"/>
+
+      </section>
+      <Footer/>
     </div>
   );
 }
-
 export default App;
