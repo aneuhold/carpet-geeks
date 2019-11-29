@@ -1,21 +1,60 @@
+
+/* Overarching app styling */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
   background-color: #282c34;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
+.App-logo {
+  height: 40vmin;
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .App-link {
   color: #09d3ac;
+}
+.horizontalBarrier {
+  width: 100vw;
+  height: 5px;
+  border: none;
+  background-color: lightgray;
+}
+
+/* Header Styling */
+.header__businessName {
+  font-size: calc(10px + 3vmin);
+}
+
+/* ServiceRow Styling */
+.serviceRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.serviceRow__textBox {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  margin: 10px;
+}
+.serviceRow__image {
+  max-width: 90%;
+  width: 300px;
+  height: auto;
+
+  /* Line up the image with the rest of the images */
+  margin: calc(5px + 2vmin);
+
+  padding: 5px;
+  border: 1px solid white;
 }

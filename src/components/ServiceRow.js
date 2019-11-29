@@ -22,13 +22,17 @@ export default class ServiceRow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="serviceRow">
         <img
+          className="serviceRow__image"
           src={carpetCleaning}
           alt="A carpet being cleaned"
         />
-        <h4>{this.props.serviceTitle}</h4>
-        <p>{this.props.serviceDescription}</p>
+        <div className="serviceRow__textBox">
+          <h4>{this.props.serviceTitle}</h4>
+          <p>{this.props.serviceDescription}</p>
+        </div>
+        
       </div>
     );
   }
