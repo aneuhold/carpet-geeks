@@ -3,11 +3,16 @@ import './App.css';
 import './components/ServiceRow';
 import ServiceRow from './components/ServiceRow';
 import Footer from './components/Footer';
+import logo from './resources/logo.jpg';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h3 className="header__businessName">Carpet Geeks</h3>
+      <header className="header">
+        <img
+          className="header__logo"
+          src={logo}
+          alt="Carpet Geeks Logo"
+        />
         <span>The best cleaner out there... Or a motto here :)</span>
       </header>
       <section>
