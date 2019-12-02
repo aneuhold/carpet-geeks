@@ -15,14 +15,18 @@ export default class ServiceRow extends React.Component {
       serviceTitle: props.serviceTitle,
 
       // Represents the description of the service offering
-      serviceDescription: props.serviceDescription
+      serviceDescription: props.serviceDescription,
+
+      // Determines if the service row should be black on white or white on black
+      whiteOnBlack: props.whiteOnBlack
 
     }
   }
 
   render() {
     return (
-      <div className="serviceRow">
+      <div className={"serviceRow " + (this.props.whiteOnBlack ? "serviceRow--whiteOnBlack" : 
+      "serviceRow--blackOnWhite")}>
         <img
           className="serviceRow__image"
           src={carpetCleaning}

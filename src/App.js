@@ -21,16 +21,17 @@ function App() {
         <ServiceRow 
           serviceTitle="Truck Mount Carpet Steam Cleaning" 
           serviceDescription="Test Description"
+          whiteOnBlack={true}
         />
-        <hr className="horizontalBarrier"/>
         <ServiceRow 
           serviceTitle="Encapsulation Carpet Cleaning" 
           serviceDescription="Test Description"
+          whiteOnBlack={false}
         />
-        <hr className="horizontalBarrier"/>
         <ServiceRow 
           serviceTitle="Tile & Grout Restoration This is a longer title" 
           serviceDescription="Test Description"
+          whiteOnBlack={true}
         />
 
       </section>

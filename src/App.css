@@ -35,17 +35,25 @@
 
 /* ServiceRow Styling */
 .serviceRow {
+  width: 100vw;
   display: grid;
   grid-template-columns: 50% auto;
-  padding: 20px;
+  padding: 20px 0px;
+}
+.serviceRow--whiteOnBlack {
   color: white;
   background: linear-gradient(270deg,black, black, white);
+}
+.serviceRow--blackOnWhite {
+  background: white;
+  color: black;
 }
 @media (max-width: 500px) {
   .serviceRow {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(0deg,black, black, white);
   }
 }
 .serviceRow__textBox {
@@ -61,6 +69,9 @@
   height: auto;
   padding: 5px;
   border: 1px solid white;
+}
+.serviceRow--blackOnWhite .serviceRow__image {
+  border: 1px solid black;
 }
 
 /* Footer Styling */
