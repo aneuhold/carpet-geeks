@@ -2,7 +2,7 @@
 /* Overarching app styling */
 .App {
   text-align: center;
-  background-color: white;
+  background-image: url("resources/so-white.png");
   color: black;
   display: flex;
   flex-direction: column;
@@ -44,8 +44,9 @@
   color: white;
   background: linear-gradient(270deg,black, black, white);
 }
+
+/* The background for blackOnWhite is the default background */
 .serviceRow--blackOnWhite {
-  background: white;
   color: black;
 }
 @media (max-width: 500px) {
@@ -69,9 +70,44 @@
   height: auto;
   padding: 5px;
   border: 1px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .serviceRow--blackOnWhite .serviceRow__image {
   border: 1px solid black;
+}
+
+/* ChromeDivider Styling */
+.chromeOutline {
+  position: relative;
+  max-block-size: 100vw;
+  background: linear-gradient(to right, black, silver, black, silver, black);
+  padding: 2px;
+}
+/* Metal look retrieved from http://simurai.com/lab/2011/08/21/brushed-metal */
+.chromeDivider {
+  height: 15px;
+  background-image: linear-gradient(180deg, hsl(0,0%,78%)  0%, 
+      hsl(0,0%,90%) 47%, 
+      hsl(0,0%,78%) 53%,
+      hsl(0,0%,70%)100%);
+}
+.chromeDivider__leftBolt {
+  position: absolute;
+  background-image: url("resources/screw-head.svg");
+  background-repeat: no-repeat;
+  top: 2px;
+  left: 4px;
+  width: 90px;
+  height: 90px;
+}
+.chromeDivider__rightBolt {
+  position: absolute;
+  background-image: url("resources/screw-head.svg");
+  background-repeat: no-repeat;
+  right: -73px;
+  top: 2px;
+  width: 90px;
+  height: 90px;
 }
 
 /* Footer Styling */
