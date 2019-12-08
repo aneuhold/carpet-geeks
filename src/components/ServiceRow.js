@@ -27,16 +27,19 @@ export default class ServiceRow extends React.Component {
     return (
       <div className={"serviceRow " + (this.props.whiteOnBlack ? "serviceRow--whiteOnBlack" : 
       "serviceRow--blackOnWhite")}>
-        <img
-          className="serviceRow__image"
-          src={carpetCleaning}
-          alt="A carpet being cleaned"
-        />
-        <div className="serviceRow__textBox">
-          <h4>{this.props.serviceTitle}</h4>
-          <p>{this.props.serviceDescription}</p>
+
+        {/* serviceRow__content class used for styling purposes */}
+        <div className="serviceRow__content">
+          <img
+            className="serviceRow__image"
+            src={carpetCleaning}
+            alt="A carpet being cleaned"
+          />
+          <div className="serviceRow__textBox">
+            <h4>{this.props.serviceTitle}</h4>
+            <p>{this.props.serviceDescription}</p>
+          </div>
         </div>
-        
       </div>
     );
   }

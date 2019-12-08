@@ -39,9 +39,11 @@
 /* ServiceRow Styling */
 .serviceRow {
   width: 100vw;
+  padding: 20px 0px;
+}
+.serviceRow__content {
   display: grid;
   grid-template-columns: 50% auto;
-  padding: 20px 0px;
 }
 .serviceRow--whiteOnBlack {
   color: white;
@@ -52,7 +54,7 @@
   color: black;
 }
 .serviceRow__image {
-  max-width: 90%;
+  max-width: 85%;
   width: 300px;
   justify-self: end;
   height: auto;
@@ -60,11 +62,23 @@
   border: 1px solid white;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+.serviceRow__textBox {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  margin: 0 10px;
+}
 @media (max-width: 500px) {
   .serviceRow {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .serviceRow__content {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
   }
   .serviceRow--whiteOnBlack {
     color: black;
@@ -73,13 +87,8 @@
   .serviceRow__image {
     background: white;
     border: 1px solid black;
+    align-self: center;
   }
-}
-.serviceRow__textBox {
-  display: flex;
-  flex-direction:column;
-  align-items: flex-start;
-  margin: 10px;
 }
 .serviceRow--blackOnWhite .serviceRow__image {
   border: 1px solid black;
@@ -116,6 +125,12 @@
   right: 5px;
   width: 15px;
   height: 15px;
+}
+
+/* CallToAction Styling */
+.callToAction {
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 /* History Styling */
