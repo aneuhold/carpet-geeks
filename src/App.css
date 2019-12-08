@@ -118,7 +118,33 @@
   height: 15px;
 }
 
+/* History Styling */
+.history {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
 /* Footer Styling */
 .footer {
   margin: 20px;
+}
+.socialIcons {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.socialIcon {
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  fill: orange;
+  display: inline-block;
+}
+.socialIcon:hover {
+  background: lightgray;
+}
+.copyrightLine {
+  font-size: small;
 }

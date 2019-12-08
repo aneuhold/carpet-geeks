@@ -11,7 +11,6 @@ export default class ChromeDivider extends React.Component {
         <h1 className="phoneNumber">503-555-5555</h1>
         <p>For more information on the services and to schedule an appointment.</p>
       </div>
-      
     );
   }
 }
