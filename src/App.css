@@ -18,6 +18,9 @@
   border: none;
   background-color: white;
 }
+.phoneNumber {
+  color: orange;
+}
 
 /* Header Styling */
 .header {
@@ -44,23 +47,9 @@
   color: white;
   background: linear-gradient(270deg,black, black, white);
 }
-
 /* The background for blackOnWhite is the default background */
 .serviceRow--blackOnWhite {
   color: black;
-}
-@media (max-width: 500px) {
-  .serviceRow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.serviceRow__textBox {
-  display: flex;
-  flex-direction:column;
-  align-items: flex-start;
-  margin: 10px;
 }
 .serviceRow__image {
   max-width: 90%;
@@ -70,6 +59,27 @@
   padding: 5px;
   border: 1px solid white;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+@media (max-width: 500px) {
+  .serviceRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .serviceRow--whiteOnBlack {
+    color: black;
+    background: lightgray;
+  }
+  .serviceRow__image {
+    background: white;
+    border: 1px solid black;
+  }
+}
+.serviceRow__textBox {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  margin: 10px;
 }
 .serviceRow--blackOnWhite .serviceRow__image {
   border: 1px solid black;
@@ -92,24 +102,49 @@
 }
 .chromeDivider__leftBolt {
   position: absolute;
-  background-image: url("resources/screw-head.svg");
-  background-repeat: no-repeat;
+  background-image: url("resources/screw-head-opt.svg");
   top: 2px;
-  left: 4px;
-  width: 90px;
-  height: 90px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
 }
 .chromeDivider__rightBolt {
   position: absolute;
-  background-image: url("resources/screw-head.svg");
+  background-image: url("resources/screw-head-opt.svg");
   background-repeat: no-repeat;
-  right: -73px;
   top: 2px;
-  width: 90px;
-  height: 90px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+/* History Styling */
+.history {
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 /* Footer Styling */
 .footer {
   margin: 20px;
+}
+.socialIcons {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.socialIcon {
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  fill: orange;
+  display: inline-block;
+}
+.socialIcon:hover {
+  background: lightgray;
+}
+.copyrightLine {
+  font-size: small;
 }

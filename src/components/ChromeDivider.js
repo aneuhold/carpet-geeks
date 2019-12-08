@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Used as a simple re-usable component for a service listing on the main page.
+ * Used as a simple re-usable component for the Chrome Divider
  */
 export default class ChromeDivider extends React.Component {
   render() {
