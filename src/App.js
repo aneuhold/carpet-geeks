@@ -15,7 +15,21 @@ import History from './components/History';
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    // Intersection observer setup
     this.callToActionRef = React.createRef();
+    const thresholdArray = new Array(11).fill(0).map((v, i) => i * 0.1);
+    const intersectionObserverCallback = entries => {
+      console.log(entries);
+    }
+    this.observer = new IntersectionObserver(intersectionObserverCallback, {
+      // Root left blank so that it defaults to the viewport
+      threshold: thresholdArray
+    })
+  }
+
+  componentDidMount() {
+    this.observer.observe(this.callToActionRef.current);
   }
 
   render() {
@@ -103,6 +117,6 @@ class App extends React.Component {
       </div>
     );
   }
-  
 }
+
 export default App;
