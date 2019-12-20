@@ -7,6 +7,7 @@ import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import logo from './resources/logo.jpg';
 import History from './components/History';
+import PhoneNumberBanner from './components/PhoneNumberBanner';
 
 class App extends React.Component {
   constructor(props) {
@@ -132,6 +133,7 @@ class App extends React.Component {
           <History/>
           <ChromeDivider/>
         </section>
+        <PhoneNumberBanner callToActionIsVisible={this.state.callToActionIsVisible}/>
         <Footer/>
       </div>
     );

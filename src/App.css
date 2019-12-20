@@ -163,3 +163,31 @@
 .copyrightLine {
   font-size: small;
 }
+
+/* PhoneNumberBanner Styling */
+.phoneNumberBanner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  height: inherit;
+  border: 1px solid black;
+  background: white;
+  border-top-left-radius: 1rem;
+}
+.phoneNumberBanner__phoneNumber {
+  font-size: 2rem;
+  background-color: black;
+  border: none;
+  margin: .5rem;
+  border-radius: 1rem;
+}
+.phoneNumberBanner__phoneNumber:active {
+  background-color: darkgrey;
+  transform: translateY(1px);
+}
+.phoneNumberBanner__callToAction {
+  font-size: 1.5rem;
+  background-color: white;
+  align-self: center;
+  margin-left: .5rem;
+}
