@@ -10,7 +10,9 @@ export default class ChromeDivider extends React.Component {
     return (
       <InView 
         as="div" 
-        onChange={(inView, entry) => console.log('Inview:', inView)}
+        onChange={(inView, entry) => {
+          this.props.setCallToActionIsVisible(inView);
+        }}
         className="callToAction"
       >
         <h2>Call Mike at</h2>

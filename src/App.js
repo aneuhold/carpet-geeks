@@ -8,16 +8,27 @@ import Footer from './components/Footer';
 import logo from './resources/logo.jpg';
 import History from './components/History';
 
-/**
- * When the page first starts up, the phone number will show up at the bottom. 
- * After the page reaches the phone number section, it will shrink away. 
- */
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+
+      // Used to show and hide the phone number banner at the bottom of the page
       callToActionIsVisible: false
     }
+    this.setCallToActionIsVisible = this.setCallToActionIsVisible.bind(this);
+  }
+
+  /**
+   * Used primarily in the CallToAction component to change if the CallToAction
+   * component is visible.
+   * 
+   * @param {Boolean} isVisible 
+   */
+  setCallToActionIsVisible(isVisible) {
+    this.setState({
+      callToActionIsVisible: isVisible
+    })
   }
 
   render() {
@@ -116,7 +127,7 @@ class App extends React.Component {
             whiteOnBlack={false}
           />
           <ChromeDivider/>
-          <CallToAction callToActionIsVisible={this.state.callToActionIsVisible}/>
+          <CallToAction setCallToActionIsVisible={this.setCallToActionIsVisible}/>
           <ChromeDivider/>
           <History/>
           <ChromeDivider/>
