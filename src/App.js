@@ -15,26 +15,34 @@ import History from './components/History';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    // Intersection observer setup
-    this.callToActionRef = React.createRef();
-    const thresholdArray = new Array(11).fill(0).map((v, i) => i * 0.1);
-    const intersectionObserverCallback = entries => {
-      console.log(entries);
+    this.state = {
+      callToActionIsVisible: false
     }
-    this.observer = new IntersectionObserver(intersectionObserverCallback, {
-      // Root left blank so that it defaults to the viewport
-      threshold: thresholdArray
-    })
-  }
-
-  componentDidMount() {
-    this.observer.observe(this.callToActionRef.current);
   }
 
   render() {
+    const debuggingOn = true;
+
     return (
       <div className="App">
+
+        {/* Testing box for visibility */}
+        <div style={{
+          color:"yellow",
+          display: debuggingOn ? "inherit" : "none",
+          width: "100px",
+          height: "100px",
+          position: "fixed",
+          right: "0px",
+          top: "0px",
+          fontSize: "12px",
+          backgroundColor: "black",
+          zIndex: "2",
+          border: "2px solid white"
+        }}>
+          The callToActionIsVisible variable is currently: {`${this.state.callToActionIsVisible}`}
+        </div>
+
         <header className="header">
           <img
             className="header__logo"
@@ -108,7 +116,7 @@ class App extends React.Component {
             whiteOnBlack={false}
           />
           <ChromeDivider/>
-          <CallToAction ref={this.callToActionRef}/>
+          <CallToAction callToActionIsVisible={this.state.callToActionIsVisible}/>
           <ChromeDivider/>
           <History/>
           <ChromeDivider/>
