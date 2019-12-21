@@ -36,7 +36,7 @@ export default class ServiceRow extends React.Component {
             alt="A carpet being cleaned"
           />
           <div className="serviceRow__textBox">
-            <h4>{this.props.serviceTitle}</h4>
+            <h3>{this.props.serviceTitle}</h3>
             <p>{this.props.serviceDescription}</p>
           </div>
         </div>

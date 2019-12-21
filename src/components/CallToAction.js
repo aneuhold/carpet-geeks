@@ -1,4 +1,6 @@
 import React from 'react';
+import { InView } from 'react-intersection-observer'
+
 
 /**
  * Used as a simple re-usable component for a service listing on the main page.
@@ -6,11 +8,22 @@ import React from 'react';
 export default class ChromeDivider extends React.Component {
   render() {
     return (
-      <div className="callToAction">
-        <h2>Call Mike at</h2>
-        <h1 className="phoneNumber">503-555-5555</h1>
+      <InView 
+        as="div" 
+        onChange={(inView, entry) => {
+          this.props.setCallToActionIsVisible(inView);
+        }}
+        className="callToAction"
+      >
+        <h2>Call Us at</h2>
+        <a 
+          className="callToAction__phoneNumber phoneNumber"
+          href="tel:503-555-5555"
+        >
+          503-555-5555
+        </a>
         <p>For more information on the services and to schedule an appointment.</p>
-      </div>
+      </InView>
     );
   }
 }
