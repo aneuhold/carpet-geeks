@@ -33,7 +33,7 @@ class App extends React.Component {
   }
 
   render() {
-    const debuggingOn = true;
+    const debuggingOn = false;
 
     return (
       <div className="App">

@@ -10,7 +10,7 @@ class PhoneNumberBanner extends React.Component {
         display: this.props.callToActionIsVisible ? "none" : "flex",
         position: "fixed",
         bottom: "0px",
-        height: "5rem",
+        height: "fit-content",
         width: "100vw",
         flexDirection: "row-reverse",
       }}>
