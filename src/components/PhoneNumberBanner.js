@@ -6,18 +6,14 @@ import React from 'react';
 class PhoneNumberBanner extends React.Component {
   render() {
     return (
-      <div style={{
-        display: this.props.callToActionIsVisible ? "none" : "flex",
-        position: "fixed",
-        bottom: "0px",
-        height: "fit-content",
-        width: "100vw",
-        flexDirection: "row-reverse",
-      }}>
+      <div className={'phoneNumberBanner__container' + (this.props.callToActionIsVisible ? ' slideIn' : ' slideOut')}>
         <div className="phoneNumberBanner">
-          <button className="phoneNumberBanner__phoneNumber phoneNumber">
+          <a 
+            href="tel:123-456-7890" 
+            className="phoneNumberBanner__phoneNumber phoneNumber"
+          >
             503-555-5555
-          </button>
+          </a>
           <span className="phoneNumberBanner__callToAction">
             CALL NOW <br/>
             for inquiries
