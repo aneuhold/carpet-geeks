@@ -1,26 +1,24 @@
 import React from 'react';
 import carpetCleaning from '../resources/non-licensed-example-carpet-image.jpg'
+import testimonials from '../resources/testimonials.json';
 
 /**
  * Used as a simple re-usable component for a service listing on the main page.
  */
 export default class ServiceRow extends React.Component {
-  constructor(props) {
-    super(props);
 
-    // Properties
-    this.state = {
-      
-      // Represents the title of the service offering
-      serviceTitle: props.serviceTitle,
+  static defaultProps = {
+    // Represents the title of the service offering
+    serviceTitle: "Title not found",
 
-      // Represents the description of the service offering
-      serviceDescription: props.serviceDescription,
+    // Represents the description of the service offering
+    serviceDescription: "Default description",
 
-      // Determines if the service row should be black on white or white on black
-      whiteOnBlack: props.whiteOnBlack
+    // Determines if the service row should be black on white or white on black
+    whiteOnBlack: true,
 
-    }
+    // Determines the id of the testimonial to use
+    testimonialID: "noID"
   }
 
   render() {
@@ -40,7 +38,15 @@ export default class ServiceRow extends React.Component {
             <p>{this.props.serviceDescription}</p>
           </div>
         </div>
+        {this.props.testimonialID !== "noID" && 
+          <div className="serviceRow__testimonial">
+            <p>Test paragraph {testimonials[this.props.testimonialID].content}</p>
+          </div>
+        }
+        
       </div>
     );
+
+    
   }
 }
