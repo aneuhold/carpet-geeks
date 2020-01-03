@@ -1,9 +1,13 @@
 import React from 'react';
 
+type PhoneNumberBannerProps = {
+  callToActionIsVisible: boolean
+}
+
 /**
  * Used as a simple re-usable component for a service listing on the main page.
  */
-class PhoneNumberBanner extends React.Component {
+class PhoneNumberBanner extends React.Component<PhoneNumberBannerProps> {
   render() {
     return (
       <div className={'phoneNumberBanner__container' + (this.props.callToActionIsVisible ? ' slideIn' : ' slideOut')}>
