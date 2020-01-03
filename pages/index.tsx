@@ -1,16 +1,19 @@
 import React from 'react';
-import './App.css';
-import './components/ServiceRow';
-import ServiceRow from './components/ServiceRow';
-import ChromeDivider from './components/ChromeDivider';
-import CallToAction from './components/CallToAction';
-import Footer from './components/Footer';
-import logo from './resources/logo.jpg';
-import History from './components/History';
-import PhoneNumberBanner from './components/PhoneNumberBanner';
+import Layout from '../layouts/AppLayout';
+import ServiceRow from '../components/ServiceRow';
+import ChromeDivider from '../components/ChromeDivider';
+import CallToAction from '../components/CallToAction';
+import Footer from '../components/Footer';
+import History from '../components/History';
+import PhoneNumberBanner from '../components/PhoneNumberBanner';
 
-class App extends React.Component {
-  constructor(props) {
+type AppProps = {}
+type AppState = {
+  callToActionIsVisible: boolean
+}
+
+class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps) {
     super(props);
     this.state = {
 
@@ -26,45 +29,27 @@ class App extends React.Component {
    * 
    * @param {Boolean} isVisible 
    */
-  setCallToActionIsVisible(isVisible) {
+  setCallToActionIsVisible(isVisible: boolean) {
     this.setState({
       callToActionIsVisible: isVisible
     })
   }
 
   render() {
-    const debuggingOn = false;
-
     return (
-      <div className="App">
-
-        {/* Testing box for visibility */}
-        <div style={{
-          color:"yellow",
-          display: debuggingOn ? "inherit" : "none",
-          width: "100px",
-          height: "100px",
-          position: "fixed",
-          right: "0px",
-          top: "0px",
-          fontSize: "12px",
-          backgroundColor: "black",
-          zIndex: "2",
-          border: "2px solid white"
-        }}>
-          The callToActionIsVisible variable is currently: {`${this.state.callToActionIsVisible}`}
-        </div>
+      <Layout>
+        <div className="App">
 
         <header className="header">
           <img
             className="header__logo"
-            src={logo}
+            src="/logo.jpg"
             alt="Carpet Geeks Logo"
           />
           <span className="header__motto">Smarter than the dirtiest carpets</span>
         </header>
         <section>
-  
+
           {/* This will be a section for each service offering */}
           <ChromeDivider/>
           <ServiceRow 
@@ -136,7 +121,9 @@ class App extends React.Component {
         </section>
         <PhoneNumberBanner callToActionIsVisible={this.state.callToActionIsVisible}/>
         <Footer/>
-      </div>
+        </div>
+      </Layout>
+      
     );
   }
 }

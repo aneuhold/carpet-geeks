@@ -1,5 +1,5 @@
 import React from 'react';
-import YelpIcon from '../resources/YelpIcon';
+import YelpIcon from '../public/YelpIcon';
 
 /**
  * Used as a simple re-usable component for a service listing on the main page.

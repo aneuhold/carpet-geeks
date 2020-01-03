@@ -1,11 +1,17 @@
-import React from 'react';
-import carpetCleaning from '../resources/non-licensed-example-carpet-image.jpg'
-import testimonials from '../resources/testimonials.json';
+import React from 'react'
+import testimonials from '../public/testimonials.json';
+
+type ServiceRowProps = {
+  whiteOnBlack: boolean,
+  serviceTitle: string,
+  serviceDescription: string,
+  testimonialID: string
+}
 
 /**
  * Used as a simple re-usable component for a service listing on the main page.
  */
-export default class ServiceRow extends React.Component {
+export default class ServiceRow extends React.Component<ServiceRowProps> {
 
   static defaultProps = {
     // Represents the title of the service offering
@@ -30,7 +36,7 @@ export default class ServiceRow extends React.Component {
         <div className="serviceRow__content">
           <img
             className="serviceRow__image"
-            src={carpetCleaning}
+            src="/non-licensed-example-carpet-image.jpg"
             alt="A carpet being cleaned"
           />
           <div className="serviceRow__textBox">
