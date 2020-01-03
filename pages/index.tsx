@@ -56,7 +56,6 @@ class App extends React.Component<AppProps, AppState> {
             serviceTitle="Truck Mount Carpet Steam Cleaning" 
             serviceDescription="Test Description"
             whiteOnBlack={true}
-            testimonialID="exampleTestimonialID"
           />
           <ServiceRow 
             serviceTitle="Encapsulation Carpet Cleaning" 
