@@ -1,10 +1,14 @@
 {
   "exampleTestimonialID": {
-    "userName": "test name",
-    "content": "This is a review!"
+    "userName": "John Doe",
+    "content": "Carpet Geeks is the best place around for cleaning carpets and other things."
   }, 
   "exampleTestimonialID2": {
-    "userName": "test name 2",
-    "content": "This is a review 2!"
+    "userName": "John Deer",
+    "content": "Carpet Geeks is great!"
+  },
+  "KGG_dcaO3jejKfXYCKD5jQ": {
+    "userName": "Kerry P.",
+    "content": "All went very well.  He was right on time.  Came on Saturday for us - we needed a rush job.  Everything looks great and I will use them again."
   }
 }

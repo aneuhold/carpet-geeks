@@ -102,6 +102,20 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
         align-items: flex-start;
         margin: 0 1rem;
       }
+      .serviceRow__testimonial {
+        display: inline-block;
+        border-radius: .5rem;
+        background-color: var(--primary-color-white);
+        color: var(--primary-color-black);
+        width: auto;
+        margin-top: 1rem;
+        padding: 0px 1rem;
+        border: 1px solid black;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+      .serviceRow__testimonialQuotes {
+        font-size: 5rem;
+      }
 
       /* Large Desktops */
       @media (min-width: 1100px) {

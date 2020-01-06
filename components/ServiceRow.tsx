@@ -46,7 +46,8 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
         </div>
         {this.props.testimonialID !== "noID" && 
           <div className="serviceRow__testimonial">
-            <p>Test paragraph {testimonials[this.props.testimonialID].content}</p>
+            <p>{testimonials[this.props.testimonialID].content}</p>
+            <h3><span className="serviceRow_testimonialQuotes">"</span>-{testimonials[this.props.testimonialID].userName}</h3>
           </div>
         }
         
