@@ -131,6 +131,24 @@ class App extends React.Component<AppProps, AppState> {
             callToActionIsVisible={this.state.callToActionIsVisible}
           />
           <Footer />
+          <style jsx>{`
+            /* Header Styling */
+            .header {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin: 1rem;
+            }
+            .header__logo {
+              height: calc(4rem + 3vmin);
+              width: auto;
+              margin: 1rem;
+            }
+            .header__motto {
+              font-size: large;
+            }
+          `}</style>
         </div>
       </Layout>
     );
