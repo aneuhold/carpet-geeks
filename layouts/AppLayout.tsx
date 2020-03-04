@@ -1,8 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from "react";
 
-type LayoutProps = {}
-
-const Layout: FunctionComponent<LayoutProps> = ({children}) => (
+const Layout: FunctionComponent = ({ children }) => (
   <div>
     {children}
     <style jsx global>{`
@@ -18,18 +16,18 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
 
       /* Overarching app styling */
       :root {
-        --primary-color-light-gray: #D3D2D7;
-        --primary-color-black: #2D2D2D;
+        --primary-color-light-gray: #d3d2d7;
+        --primary-color-black: #2d2d2d;
         --primary-color-white: white;
-        --primary-color-orange: #D7791D;
+        --primary-color-orange: #d7791d;
         --primary-color-dark-gray: #656565;
         --mobile-break-point: 500px;
       }
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-          sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: white;
@@ -91,16 +89,32 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
         width: 15rem;
         justify-self: end;
         height: auto;
-        padding: .5rem;
+        padding: 0.5rem;
         background-color: white;
         border: 1px solid white;
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
       }
       .serviceRow__textBox {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         align-items: flex-start;
         margin: 0 1rem;
+      }
+      .serviceRow__testimonial {
+        display: inline-block;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color-white);
+        color: var(--primary-color-black);
+        width: auto;
+        margin-top: 1rem;
+        padding: 0px 1rem;
+        border: 1px solid black;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      .serviceRow__testimonialQuotes {
+        font-size: 5rem;
       }
 
       /* Large Desktops */
@@ -138,16 +152,26 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
       .chromeOutline {
         position: relative;
         max-block-size: 100vw;
-        background: linear-gradient(to right, black, silver, black, silver, black);
+        background: linear-gradient(
+          to right,
+          black,
+          silver,
+          black,
+          silver,
+          black
+        );
         padding: 2px;
       }
       /* Metal look retrieved from http://simurai.com/lab/2011/08/21/brushed-metal */
       .chromeDivider {
         height: 15px;
-        background-image: linear-gradient(180deg, hsl(0,0%,78%)  0%, 
-            hsl(0,0%,90%) 47%, 
-            hsl(0,0%,78%) 53%,
-            hsl(0,0%,70%)100%);
+        background-image: linear-gradient(
+          180deg,
+          hsl(0, 0%, 78%) 0%,
+          hsl(0, 0%, 90%) 47%,
+          hsl(0, 0%, 78%) 53%,
+          hsl(0, 0%, 70%) 100%
+        );
       }
       .chromeDivider__leftBolt {
         position: absolute;
@@ -180,7 +204,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
         border: 1px solid black;
         width: fit-content;
         font-size: 2rem;
-        padding: .75rem;
+        padding: 0.75rem;
         background-color: var(--primary-color-black);
         border-radius: 1rem;
         text-decoration: none;
@@ -206,7 +230,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
       }
       .socialIcons {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         margin: 1rem;
@@ -255,8 +279,8 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
         font-size: 2rem;
         background-color: var(--primary-color-black);
         border: none;
-        margin: .5rem;
-        padding: .75rem 0.5rem;
+        margin: 0.5rem;
+        padding: 0.75rem 0.5rem;
         border-radius: 1rem;
         text-decoration: none;
       }
@@ -271,7 +295,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
         font-size: 1.5rem;
         background-color: white;
         align-self: center;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
       }
       @media (max-width: 500px) {
         .phoneNumberBanner {
@@ -289,7 +313,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children}) => (
           font-size: 1.5rem;
           background-color: white;
           align-self: center;
-          margin-left: .5rem;
+          margin-left: 0.5rem;
         }
       }
       /* Very Small Devices */
