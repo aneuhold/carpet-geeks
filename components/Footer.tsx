@@ -61,7 +61,7 @@ export default class Footer extends React.Component {
             padding: 1rem;
             border-radius: 50%;
             text-align: center;
-            fill: var(--primary-color-orange);
+            fill: var(--primary-brand-color);
             display: inline-block;
           }
           :global(.socialIcon:hover) {

@@ -12,6 +12,7 @@ const Layout: FunctionComponent = ({ children }) => (
         White
         Charleston Green (Blackish): #2D2D2D
         Granite Gray: #656565
+        Green from Van Image, Pear evidently?: #c1bb3f
       */
 
       /* Overarching app styling */
@@ -19,6 +20,7 @@ const Layout: FunctionComponent = ({ children }) => (
         --primary-color-light-gray: #d3d2d7;
         --primary-color-black: #2d2d2d;
         --primary-color-white: white;
+        --primary-brand-color: #c1bb3f;
         --primary-color-orange: #d7791d;
         --primary-color-dark-gray: #656565;
         --mobile-break-point: 500px;
@@ -46,7 +48,7 @@ const Layout: FunctionComponent = ({ children }) => (
         justify-content: center;
       }
       .phoneNumber {
-        color: var(--primary-color-orange);
+        color: var(--primary-brand-color);
       }
     `}</style>
   </div>

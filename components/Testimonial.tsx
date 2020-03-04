@@ -21,12 +21,13 @@ export default class Testimonial extends React.Component<TestimonialProps> {
           .testimonial {
             display: inline-block;
             border-radius: 0.5rem;
-            background-color: white;
-            color: black;
+            background-color: var(--primary-color-white);
+            color: var(--primary-color-black);
+            max-width: 85vw;
             width: auto;
             margin-top: 1rem;
             padding: 0px 1rem;
-            border: 1px solid black;
+            border: 1px solid var(--primary-color-black);
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
               0 6px 6px rgba(0, 0, 0, 0.23);
           }
