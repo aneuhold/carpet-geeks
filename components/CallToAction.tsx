@@ -1,14 +1,14 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer'
 
-type ChromeDividerProps = {
+type CallToActionProps = {
   setCallToActionIsVisible: (inView: boolean) => void,
 }
 
 /**
  * Used as a simple re-usable component for a service listing on the main page.
  */
-export default class ChromeDivider extends React.Component<ChromeDividerProps> {
+export default class CallToAction extends React.Component<CallToActionProps> {
   render() {
     return (
       <InView 
