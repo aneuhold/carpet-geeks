@@ -40,7 +40,7 @@ const Layout: FunctionComponent = ({ children }) => (
       }
       .App {
         text-align: center;
-        background-image: url("/so-white.png");
+        background-image: url("/images/so-white.png");
         color: var(--primary-color-black);
         display: flex;
         flex-direction: column;
