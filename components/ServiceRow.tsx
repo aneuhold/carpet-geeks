@@ -1,11 +1,14 @@
 import React, { Fragment } from "react";
 import Testimonial from "./Testimonial";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 type ServiceRowProps = {
   whiteOnBlack: boolean;
   serviceTitle: string;
   serviceDescription: string;
   testimonialID: string;
+  imgSrc: string;
 };
 
 /**
@@ -39,11 +42,17 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
         >
           {/* serviceRow__content class used for styling purposes */}
           <div className="serviceRow__content">
-            <img
-              className="serviceRow__image"
-              src="/non-licensed-example-carpet-image.jpg"
-              alt="A carpet being cleaned"
-            />
+            <div className="zoomContainer">
+              <Zoom>
+                <img
+                  className="serviceRow__image"
+                  src={this.props.imgSrc}
+                  alt="A carpet being cleaned"
+                />
+              </Zoom>
+            </div>
+            {/*
+             */}
             <div className="serviceRow__textBox">
               <h3>{this.props.serviceTitle}</h3>
               <p>{this.props.serviceDescription}</p>
@@ -63,7 +72,7 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
           }
           .serviceRow__content {
             display: grid;
-            grid-template-columns: 50% auto;
+            grid-template-columns: 1fr 1fr;
           }
           .serviceRow--whiteOnBlack {
             color: black;
@@ -74,17 +83,22 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
           .serviceRow--blackOnWhite {
             color: var(--primary-color-black);
           }
-          .serviceRow__image {
+          .zoomContainer {
             max-width: 85%;
-            width: 15rem;
+            width: auto;
             justify-self: end;
-            height: auto;
+          }
+
+          .serviceRow__image {
+            width: 15rem;
+            padding: 0px;
+            margin: 0.1rem;
             border-radius: 8px;
-            padding: 0.5rem;
-            background-color: white;
             border: 1px solid black;
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
               0 6px 6px rgba(0, 0, 0, 0.23);
+            padding: 0.5rem;
+            background-color: white;
           }
           .serviceRow__textBox {
             display: flex;
@@ -117,7 +131,7 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
             }
           }
           /* Mobile Devices */
-          @media (max-width: 500px) {
+          @media (max-width: 600px) {
             .serviceRow {
               display: flex;
               flex-direction: column;
@@ -128,6 +142,9 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
               display: flex;
               flex-direction: column;
               align-items: left;
+            }
+            .zoomContainer {
+              align-self: center;
             }
             .serviceRow__image {
               background: white;

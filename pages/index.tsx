@@ -46,7 +46,7 @@ class App extends React.Component<AppProps, AppState> {
           <header className="header">
             <img
               className="header__logo"
-              src="/logo.jpg"
+              src="/images/logo.jpg"
               alt="Carpet Geeks Logo"
             />
             <span className="header__motto">
@@ -61,63 +61,75 @@ class App extends React.Component<AppProps, AppState> {
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="exampleTestimonialID"
+              imgSrc="/images/work/carpetSteamCleaning.jpg"
             />
             <ServiceRow
               serviceTitle="Encapsulation Carpet Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={false}
               testimonialID="exampleTestimonialID2"
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Tile & Grout Restoration"
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="KGG_dcaO3jejKfXYCKD5jQ"
+              imgSrc="/images/work/tileAndGroutCleaning.jpg"
             />
             <ServiceRow
               serviceTitle="Stain Removal"
               serviceDescription="Test Description"
               whiteOnBlack={false}
+              imgSrc="/images/work/stainRemoval.jpg"
             />
             <ServiceRow
               serviceTitle="Medical Sanitizing"
               serviceDescription="Test Description"
               whiteOnBlack={true}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Mildew Treatment"
               serviceDescription="Test Description"
               whiteOnBlack={false}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Pet Stain & Odor Removal"
               serviceDescription="Test Description"
               whiteOnBlack={true}
+              imgSrc="/images/work/petStainRemoval.jpg"
             />
             <ServiceRow
               serviceTitle="Vent & Duct Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={false}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Upholstery and Fine Fabric Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={true}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Oriental Rug Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={false}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Upholstery and Fine Fabric Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={true}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Emergency Water Damage Restoration & Drying Service"
               serviceDescription="Test Description"
               whiteOnBlack={false}
+              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ChromeDivider />
             <CallToAction

@@ -14,7 +14,8 @@ export default class Testimonial extends React.Component<TestimonialProps> {
           <p className="quote">{testimonial.content}</p>
 
           <h3>
-            <i className="fas fa-quote-right"></i> - {testimonial.userName}
+            <i className="fas fa-quote-right quoteIcon"></i> -{" "}
+            {testimonial.userName}
           </h3>
         </div>
         <style jsx>{`
@@ -30,6 +31,9 @@ export default class Testimonial extends React.Component<TestimonialProps> {
             border: 1px solid var(--primary-color-black);
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
               0 6px 6px rgba(0, 0, 0, 0.23);
+          }
+          .quoteIcon {
+            color: var(--primary-brand-color);
           }
         `}</style>
       </React.Fragment>

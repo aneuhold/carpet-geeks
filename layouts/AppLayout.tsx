@@ -23,7 +23,7 @@ const Layout: FunctionComponent = ({ children }) => (
         --primary-brand-color: #c1bb3f;
         --primary-color-orange: #d7791d;
         --primary-color-dark-gray: #656565;
-        --mobile-break-point: 500px;
+        --mobile-break-point: 600px;
       }
       body {
         margin: 0;
