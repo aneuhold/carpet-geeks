@@ -60,76 +60,73 @@ class App extends React.Component<AppProps, AppState> {
               serviceTitle="Truck Mount Carpet Steam Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={true}
-              testimonialID="exampleTestimonialID"
+              testimonialID="Ibu9p6-QMDj6YcB9CPqi0w"
               imgSrc="/images/work/carpetSteamCleaning.jpg"
             />
             <ServiceRow
               serviceTitle="Encapsulation Carpet Cleaning"
               serviceDescription="Test Description"
               whiteOnBlack={false}
-              testimonialID="exampleTestimonialID2"
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
+              testimonialID="rue6RKvykZhAYS3LEGlPEw"
             />
             <ServiceRow
               serviceTitle="Tile & Grout Restoration"
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="KGG_dcaO3jejKfXYCKD5jQ"
-              imgSrc="/images/work/tileAndGroutCleaning.jpg"
+              imgSrc="/images/work/tileAndGroutCleaning2.jpg"
             />
             <ServiceRow
               serviceTitle="Stain Removal"
               serviceDescription="Test Description"
               whiteOnBlack={false}
-              imgSrc="/images/work/stainRemoval.jpg"
+              testimonialID="R20vLw8JU80krBtxh0ihKg"
+              imgSrc="/images/work/stainRemovalBeforeAfter.jpg"
             />
             <ServiceRow
               serviceTitle="Medical Sanitizing"
+              testimonialID="fOmvp8iRSSlWRJhoSLVd8w"
               serviceDescription="Test Description"
               whiteOnBlack={true}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Mildew Treatment"
               serviceDescription="Test Description"
+              testimonialID="IOB11QGS"
               whiteOnBlack={false}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Pet Stain & Odor Removal"
               serviceDescription="Test Description"
               whiteOnBlack={true}
+              testimonialID="petDamage1"
               imgSrc="/images/work/petStainRemoval.jpg"
             />
             <ServiceRow
               serviceTitle="Vent & Duct Cleaning"
               serviceDescription="Test Description"
+              testimonialID="y2pd6_"
               whiteOnBlack={false}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
-            />
-            <ServiceRow
-              serviceTitle="Upholstery and Fine Fabric Cleaning"
-              serviceDescription="Test Description"
-              whiteOnBlack={true}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
             />
             <ServiceRow
               serviceTitle="Oriental Rug Cleaning"
               serviceDescription="Test Description"
-              whiteOnBlack={false}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
+              whiteOnBlack={true}
+              testimonialID="KlyAFoMFGQrEcf"
+              imgSrc="/images/work/orientalRugCleaning.jpg"
             />
             <ServiceRow
               serviceTitle="Upholstery and Fine Fabric Cleaning"
               serviceDescription="Test Description"
-              whiteOnBlack={true}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
+              testimonialID="NNRI9E7upjH30TWMqwAjew"
+              whiteOnBlack={false}
+              imgSrc="/images/work/upholsteryCleaning.jpg"
             />
             <ServiceRow
               serviceTitle="Emergency Water Damage Restoration & Drying Service"
               serviceDescription="Test Description"
-              whiteOnBlack={false}
-              imgSrc="/images/non-licensed-example-carpet-image.jpg"
+              testimonialID="mG2Z_XqT6Zg0aONRGM55Q"
+              whiteOnBlack={true}
             />
             <ChromeDivider />
             <CallToAction
