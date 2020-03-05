@@ -7,7 +7,6 @@ module.exports = withPlugins([
   [
     optimizedImages,
     {
-      optimizeImagesInDev: true,
       responsive: {
         sizes: [100, 300, 500, 1000]
       },
