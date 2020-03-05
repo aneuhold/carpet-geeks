@@ -24,7 +24,7 @@ export default class Testimonial extends React.Component<TestimonialProps> {
             border-radius: 0.5rem;
             background-color: var(--primary-color-white);
             color: var(--primary-color-black);
-            max-width: 85vw;
+            max-width: 85%;
             width: auto;
             margin-top: 1rem;
             padding: 0px 1rem;

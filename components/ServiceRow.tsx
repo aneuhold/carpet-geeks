@@ -26,7 +26,10 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
     whiteOnBlack: true,
 
     // Determines the id of the testimonial to use
-    testimonialID: "noID"
+    testimonialID: "noID",
+
+    // If this is set to "none", then the image is left out and it is formatted differently
+    imgSrc: "none"
   };
 
   render() {
@@ -40,24 +43,31 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
               : "serviceRow--blackOnWhite")
           }
         >
-          {/* serviceRow__content class used for styling purposes */}
-          <div className="serviceRow__content">
-            <div className="zoomContainer">
-              <Zoom>
-                <img
-                  className="serviceRow__image"
-                  src={this.props.imgSrc}
-                  alt="A carpet being cleaned"
-                />
-              </Zoom>
-            </div>
-            {/*
-             */}
-            <div className="serviceRow__textBox">
+          {/* If an image is not provided */}
+          {this.props.imgSrc === "none" ? (
+            <div className="serviceRow__textBox--centered">
               <h3>{this.props.serviceTitle}</h3>
               <p>{this.props.serviceDescription}</p>
             </div>
-          </div>
+          ) : (
+            /* If an image is provided */
+            <div className="serviceRow__content">
+              <div className="zoomContainer gridLeftSide">
+                <Zoom>
+                  <img
+                    className="serviceRow__image"
+                    src={this.props.imgSrc}
+                    alt="A carpet being cleaned"
+                  />
+                </Zoom>
+              </div>
+              <div className="serviceRow__textBox">
+                <h3>{this.props.serviceTitle}</h3>
+                <p>{this.props.serviceDescription}</p>
+              </div>
+            </div>
+          )}
+
           {this.props.testimonialID !== "noID" ? (
             <Testimonial testimonialID={this.props.testimonialID} />
           ) : (
@@ -83,10 +93,12 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
           .serviceRow--blackOnWhite {
             color: var(--primary-color-black);
           }
+          .gridLeftSide {
+            justify-self: end;
+          }
           .zoomContainer {
             max-width: 85%;
             width: auto;
-            justify-self: end;
           }
 
           .serviceRow__image {
@@ -104,6 +116,14 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            justify-content: center;
+            margin: 0 1rem;
+          }
+          .serviceRow__textBox--centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             margin: 0 1rem;
           }
           .serviceRow__testimonial {
