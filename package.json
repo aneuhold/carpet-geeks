@@ -1,5 +1,5 @@
 {
-  "name": "carpet-geeks-next",
+  "name": "carpet-geeks",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,22 +8,30 @@
     "build": "next build",
     "export": "next export",
     "deploy": "npm run build && npm run export",
-    "start": "next start"
+    "start": "next start",
+    "resizeImages": "node ./scripts/resizeImages.js"
   },
   "keywords": [],
   "author": "Anton G Neuhold Jr",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "lqip-loader": "^2.2.0",
     "next": "^9.1.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-intersection-observer": "^8.25.2",
-    "react-medium-image-zoom": "^4.0.4"
+    "react-medium-image-zoom": "^4.0.4",
+    "responsive-loader": "^1.2.0",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
+    "sharp": "^0.24.1",
     "typescript": "^3.7.4"
   }
 }

@@ -8,7 +8,7 @@ type ServiceRowProps = {
   serviceTitle: string;
   serviceDescription: string;
   testimonialID: string;
-  imgSrc: string;
+  imgName: string;
 };
 
 /**
@@ -29,7 +29,7 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
     testimonialID: "noID",
 
     // If this is set to "none", then the image is left out and it is formatted differently
-    imgSrc: "none"
+    imgName: "none"
   };
 
   render() {
@@ -44,7 +44,7 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
           }
         >
           {/* If an image is not provided */}
-          {this.props.imgSrc === "none" ? (
+          {this.props.imgName === "none" ? (
             <div className="serviceRow__textBox--centered">
               <h3>{this.props.serviceTitle}</h3>
               <p>{this.props.serviceDescription}</p>
@@ -54,11 +54,28 @@ export default class ServiceRow extends React.Component<ServiceRowProps> {
             <div className="serviceRow__content">
               <div className="zoomContainer gridLeftSide">
                 <Zoom>
-                  <img
-                    className="serviceRow__image"
-                    src={this.props.imgSrc}
-                    alt="A carpet being cleaned"
-                  />
+                  <picture>
+                    <source
+                      srcSet={
+                        require(`../images/work/${this.props.imgName}.jpg?resize`)
+                          .srcSet
+                      }
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcSet={require(`../images/work/${this.props.imgName}.jpg?webp`)}
+                      type="image/webp"
+                    />
+                    <source
+                      srcSet={require(`../images/work/${this.props.imgName}.jpg`)}
+                      type="image/jpeg"
+                    />
+                    <img
+                      className="serviceRow__image"
+                      src={require(`../images/work/${this.props.imgName}.jpg`)}
+                      alt="A carpet being cleaned"
+                    />
+                  </picture>
                 </Zoom>
               </div>
               <div className="serviceRow__textBox">

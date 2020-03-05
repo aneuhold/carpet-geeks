@@ -36,19 +36,29 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   render() {
+    // Set up the logo image so it is optimized
+    const imageLogoSrcSet = require(`../images/logo.jpg?resize`).srcSet;
+
     return (
       <Layout>
         <div className="App">
           <Head>
-            <link rel="stylesheet" href="./css/all.css" />
+            <title>Carpet Geeks - Carpet Cleaning Service</title>
           </Head>
 
           <header className="header">
-            <img
-              className="header__logo"
-              src="/images/logo.jpg"
-              alt="Carpet Geeks Logo"
-            />
+            <picture>
+              <source srcSet={imageLogoSrcSet} type="image/webp" />
+              <source
+                srcSet={require(`../images/logo.jpg`)}
+                type="image/jpeg"
+              />
+              <img
+                className="header__logo"
+                src={require(`../images/logo.jpg`)}
+                alt="A carpet being cleaned"
+              />
+            </picture>
             <span className="header__motto">
               Smarter than the dirtiest carpets
             </span>
@@ -61,7 +71,7 @@ class App extends React.Component<AppProps, AppState> {
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="Ibu9p6-QMDj6YcB9CPqi0w"
-              imgSrc="/images/work/carpetSteamCleaning.jpg"
+              imgName="carpetSteamCleaning"
             />
             <ServiceRow
               serviceTitle="Encapsulation Carpet Cleaning"
@@ -74,14 +84,14 @@ class App extends React.Component<AppProps, AppState> {
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="KGG_dcaO3jejKfXYCKD5jQ"
-              imgSrc="/images/work/tileAndGroutCleaning2.jpg"
+              imgName="tileAndGroutCleaning2"
             />
             <ServiceRow
               serviceTitle="Stain Removal"
               serviceDescription="Test Description"
               whiteOnBlack={false}
               testimonialID="R20vLw8JU80krBtxh0ihKg"
-              imgSrc="/images/work/stainRemovalBeforeAfter.jpg"
+              imgName="stainRemovalBeforeAfter"
             />
             <ServiceRow
               serviceTitle="Medical Sanitizing"
@@ -100,7 +110,7 @@ class App extends React.Component<AppProps, AppState> {
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="petDamage1"
-              imgSrc="/images/work/petStainRemoval.jpg"
+              imgName="petStainRemoval"
             />
             <ServiceRow
               serviceTitle="Vent & Duct Cleaning"
@@ -113,14 +123,14 @@ class App extends React.Component<AppProps, AppState> {
               serviceDescription="Test Description"
               whiteOnBlack={true}
               testimonialID="KlyAFoMFGQrEcf"
-              imgSrc="/images/work/orientalRugCleaning.jpg"
+              imgName="orientalRugCleaning"
             />
             <ServiceRow
               serviceTitle="Upholstery and Fine Fabric Cleaning"
               serviceDescription="Test Description"
               testimonialID="NNRI9E7upjH30TWMqwAjew"
               whiteOnBlack={false}
-              imgSrc="/images/work/upholsteryCleaning.jpg"
+              imgName="upholsteryCleaning"
             />
             <ServiceRow
               serviceTitle="Emergency Water Damage Restoration & Drying Service"
