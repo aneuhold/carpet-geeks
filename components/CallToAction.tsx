@@ -5,9 +5,6 @@ type CallToActionProps = {
   setCallToActionIsVisible: (inView: boolean) => void;
 };
 
-/**
- * Used as a simple re-usable component for a service listing on the main page.
- */
 export default class CallToAction extends React.Component<CallToActionProps> {
   render() {
     return (

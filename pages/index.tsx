@@ -7,10 +7,13 @@ import Footer from "../components/Footer";
 import History from "../components/History";
 import PhoneNumberBanner from "../components/PhoneNumberBanner";
 import Head from "next/head";
+import Header from "../components/Header";
 
 type AppProps = {};
 type AppState = {
   callToActionIsVisible: boolean;
+  bannerIsOpen: boolean;
+  headerHasShrunkOnce: boolean;
 };
 
 class App extends React.Component<AppProps, AppState> {
@@ -18,9 +21,17 @@ class App extends React.Component<AppProps, AppState> {
     super(props);
     this.state = {
       // Used to show and hide the phone number banner at the bottom of the page
-      callToActionIsVisible: false
+      callToActionIsVisible: false,
+
+      // Used to open the full banner at the top of the page or minimize it.
+      bannerIsOpen: true,
+
+      /* Used to determine if the header has been shrunk at least once.
+       * This is primarily used in the Header component */
+      headerHasShrunkOnce: false
     };
     this.setCallToActionIsVisible = this.setCallToActionIsVisible.bind(this);
+    this.setBannerIsOpen = this.setBannerIsOpen.bind(this);
   }
 
   /**
@@ -35,34 +46,37 @@ class App extends React.Component<AppProps, AppState> {
     });
   }
 
-  render() {
-    // Set up the logo image so it is optimized
-    const imageLogoSrcSet = require(`../images/logo.jpg?resize`).srcSet;
+  /**
+   * Used primarily in the Header component to change if the Header is expanded
+   * or minimized
+   *
+   * @param {Boolean} isVisible
+   */
+  setBannerIsOpen(isOpen: boolean) {
+    if (isOpen === false) {
+      this.setState({
+        headerHasShrunkOnce: true,
+        bannerIsOpen: isOpen
+      });
+    } else {
+      this.setState({
+        bannerIsOpen: isOpen
+      });
+    }
+  }
 
+  render() {
     return (
       <Layout>
         <div className="App">
           <Head>
             <title>Carpet Geeks - Carpet Cleaning Service</title>
           </Head>
-
-          <header className="header">
-            <picture>
-              <source srcSet={imageLogoSrcSet} type="image/webp" />
-              <source
-                srcSet={require(`../images/logo.jpg`)}
-                type="image/jpeg"
-              />
-              <img
-                className="header__logo"
-                src={require(`../images/logo.jpg`)}
-                alt="A carpet being cleaned"
-              />
-            </picture>
-            <span className="header__motto">
-              Smarter than the dirtiest carpets
-            </span>
-          </header>
+          <Header
+            setBannerIsOpen={this.setBannerIsOpen}
+            bannerIsOpen={this.state.bannerIsOpen}
+            headerHasShrunkOnce={this.state.headerHasShrunkOnce}
+          />
           <section>
             {/* This will be a section for each service offering */}
             <ChromeDivider />
@@ -150,24 +164,6 @@ class App extends React.Component<AppProps, AppState> {
             callToActionIsVisible={this.state.callToActionIsVisible}
           />
           <Footer />
-          <style jsx>{`
-            /* Header Styling */
-            .header {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              margin: 1rem;
-            }
-            .header__logo {
-              height: calc(4rem + 3vmin);
-              width: auto;
-              margin: 1rem;
-            }
-            .header__motto {
-              font-size: large;
-            }
-          `}</style>
         </div>
       </Layout>
     );
