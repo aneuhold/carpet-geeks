@@ -1,8 +1,5 @@
 import React from "react";
 
-/**
- * Used as a simple re-usable component for a service listing on the main page.
- */
 export default class History extends React.Component {
   render() {
     return (
