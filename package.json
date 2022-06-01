@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
-    "sharp": "^0.24.1",
+    "sharp": "^0.30.5",
     "typescript": "^3.7.4"
   }
 }
